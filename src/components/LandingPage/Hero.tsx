@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import Image from "next/image"
 
@@ -60,8 +61,17 @@ export const Hero = () => {
                             className="w-[12.845vw]"
                         />
                     </div>
-                    <div className="flex items-center text-center mask-linear-135 mask-linear-from-85% mask-linear-to-85% bg-[#F2013C] w-[18vw] h-[3.125vw]">
-                        <div className="w-[85%] text-white text-3xl">EXPLORE NOW</div>
+                    <div className="hover:drop-shadow-[20px_10px_0_rgba(242,1,60,1)] w-[18vw] h-[3.125vw] z-1 transition-all duration-340">
+                        <Link
+                        href={''}
+                        className="flex items-center text-center mask-linear-135 mask-linear-from-85% mask-linear-to-85% bg-[#F2013C] w-[18vw] h-[3.125vw] z-1
+                        relative overflow-hidden text-white shadow-2xl 
+                        transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-[#050014] 
+                        before:transition-all before:duration-340 hover:text-white hover:before:left-0 hover:before:w-full active:before:bg-[#A37188] active:before:transition-none">
+                            <p className="absolute w-[85%] text-3xl group/unit relative">
+                                EXPLORE NOW
+                            </p>
+                        </Link>
                     </div>
                 </div>
                 <div className="bg-black">
