@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import Image from "next/image"
 import NavBar from "@/components/Navbar/navbarDesktop";
-import Hero from "@/components/Hero";
+import Hero from "@/components/LandingPage/Hero";
 
 export default function Home() {
   return (
@@ -103,7 +103,7 @@ export default function Home() {
         />
 
         {/*CONTENTS CONTAINER*/}
-        <div className="w-screen my-[1.042vw] flex flex-col items-center justify-center relative z-2">
+        <div className="w-full my-[1.042vw] flex flex-col items-center justify-center relative z-2">
           <>
           <NavBar/>
           </>
