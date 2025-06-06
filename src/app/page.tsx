@@ -1,6 +1,8 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image"
+import NavBar from "@/components/Navbar/navbarDesktop";
+import Hero from "@/components/Hero";
 
 export default function Home() {
   return (
@@ -100,21 +102,12 @@ export default function Home() {
           className="absolute z-0 top-[10.938vw] right-[14.74vw] w-auto"
         />
 
-        {/* Navbar */}
-        <div className="bg-[#F2013C] opacity-10 w-full h-[100px] relative">
-          
+        {/*CONTENTS CONTAINER*/}
+        <div className="w-screen my-[1.042vw] flex flex-col items-center justify-center relative z-2">
+          <>
+          <NavBar/>
+          </>
         </div>
-
-        {/* Hero */}
-        <div className="bg-black opacity-10 w-full h-[1080px] relative">
-          
-        </div>
-
-
-
-
-
-
 
         {/* boxes */}
         <div className="group flex w-[46.354vw] max-md:flex-col relative justify-center gap-[1.563vw] mb-8">
