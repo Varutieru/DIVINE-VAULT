@@ -1,103 +1,184 @@
-import Image from "next/image";
+"use client";
+import React, { useState } from "react";
+import Image from "next/image"
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
+    <main>
+      <div className="bg-[#EAE7F0] relative overflow-hidden">
+        {/* BOTTOM LAYER */}
         <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
+          src="/assets/background/polygonRight.svg"
+          alt="Background"
+          quality={100}
+          width={(1920 * 2) / 3}
+          height={(3148 * 2) / 3}
+          sizes="100vw"
+          className="absolute z-0 top-[0] right-[0] w-auto"
         />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+        <Image
+          src="/assets/background/ornament1.svg"
+          alt="Background"
+          quality={100}
+          width={(1920 * 2) / 3}
+          height={(3148 * 2) / 3}
+          sizes="100vw"
+          className="absolute z-0 top-[23.281vw] left-[5.052vw] w-auto"
+        />
+        <Image
+          src="/assets/background/ornament4.svg"
+          alt="Background"
+          quality={100}
+          width={(1920 * 2) / 3}
+          height={(3148 * 2) / 3}
+          sizes="100vw"
+          className="absolute z-0 top-[9.01vw] left-[5.052vw] w-auto"
+        />
+        <Image
+          src="/assets/background/ornament5.svg"
+          alt="Background"
+          quality={100}
+          width={(1920 * 2) / 3}
+          height={(3148 * 2) / 3}
+          sizes="100vw"
+          className="absolute z-0 top-[33.575vw] right-[18.438vw] w-auto"
+        />
+        
+        {/* TOP LAYER */}
+        <Image
+          src="/assets/background/grids.svg"
+          alt="Background"
+          quality={100}
+          width={(1920 * 2) / 3}
+          height={(3148 * 2) / 3}
+          sizes="100vw"
+          className="absolute z-0 top-[1.667vw] left-[1.563vw] w-auto"
+        />
+        <Image
+          src="/assets/background/decorationData.svg"
+          alt="Background"
+          quality={100}
+          width={(1920 * 2) / 3}
+          height={(3148 * 2) / 3}
+          sizes="100vw"
+          className="absolute z-0 top-[0] right-[0] w-auto"
+        />
+        <Image
+          src="/assets/background/divider3.svg"
+          alt="Background"
+          quality={100}
+          width={(1920 * 2) / 3}
+          height={(3148 * 2) / 3}
+          sizes="100vw"
+          className="absolute z-0 top-[18.75vw] right-[2.604vw] w-auto"
+        />
+        <Image
+          src="/assets/background/divider5.svg"
+          alt="Background"
+          quality={100}
+          width={(1920 * 2) / 3}
+          height={(3148 * 2) / 3}
+          sizes="100vw"
+          className="absolute z-0 top-[7.083vw] left-[1.25vw] w-auto"
+        />
+        <Image
+          src="/assets/background/squareRed.svg"
+          alt="Background"
+          quality={100}
+          width={(1920 * 2) / 3}
+          height={(3148 * 2) / 3}
+          sizes="100vw"
+          className="absolute z-0 top-[10.938vw] right-[17.813vw] w-auto"
+        />
+        <Image
+          src="/assets/background/squareGray.svg"
+          alt="Background"
+          quality={100}
+          width={(1920 * 2) / 3}
+          height={(3148 * 2) / 3}
+          sizes="100vw"
+          className="absolute z-0 top-[10.938vw] right-[14.74vw] w-auto"
+        />
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+        {/* Navbar */}
+        <div className="bg-[#F2013C] opacity-10 w-full h-[100px] relative">
+          
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+
+        {/* Hero */}
+        <div className="bg-black opacity-10 w-full h-[1080px] relative">
+          
+        </div>
+
+
+
+
+
+
+
+        {/* boxes */}
+        <div className="group flex w-[46.354vw] max-md:flex-col relative justify-center gap-[1.563vw] mb-8">
+          <article className="group/article relative w-full grayscale hover:grayscale-0 focus:grayscale-0 focus-within:grayscale-0 shadow-[-5px_5px_5px_rgba(0,0,0,0.25)] overflow-hidden md:group-focus:[&:not(:focus)]:w-[66%] md:group-focus-within:[&:not(:focus-within):not(:focus)]:w-[66%] 
+            transition-all duration-300 before:absolute before:inset-x-0 before:bottom-0 before:h-1/3
+            before:bg-gradient-to-t before:from-black/50 before:transition-opacity md:before:opacity-0 focus:before:opacity-100 focus-within:before:opacity-100 
+            after:opacity-0 md:group-focus:[&:not(:focus)]:after:opacity-100 md:group-focus-within:[&:not(:focus-within):not(:focus)]:after:opacity-100 after:absolute 
+            after:inset-0 after:transition-all">
+              <a className="absolute inset-0 text-white z-10" href="#0">
+                  <span className="absolute inset-x-0 bottom-0 text-lg font-medium p-6 md:px-12 md:py-8 md:whitespace-nowrap md:truncate md:opacity-0 group-focus/article:opacity-100 group-focus-within/article:opacity-100 
+                  md:translate-y-2 group-focus/article:translate-y-0 group-focus-within/article:translate-y-0 transition duration-200 ease-[cubic-bezier(.5,.85,.25,1.8)] 
+                  group-focus/article:delay-300 group-focus-within/article:delay-300">"Innovate relentlessly. Stagnation is the enemy of progress."</span>
+              </a>
+              <img className="object-cover h-72 md:h-[480px] md:w-auto" src="/assets/accordion/archangel.png" width="960" height="480" alt="Image 01"></img>
+          </article>
+          <article className="group/article relative w-full grayscale hover:grayscale-0 focus:grayscale-0 focus-within:grayscale-0 shadow-[-5px_5px_5px_rgba(0,0,0,0.25)] overflow-hidden md:group-focus:[&:not(:focus)]:w-[66%] md:group-focus-within:[&:not(:focus-within):not(:focus)]:w-[66%] 
+            transition-all duration-300 before:absolute before:inset-x-0 before:bottom-0 before:h-1/3
+            before:bg-gradient-to-t before:from-black/50 before:transition-opacity md:before:opacity-0 focus:before:opacity-100 focus-within:before:opacity-100 
+            after:opacity-0 md:group-focus:[&:not(:focus)]:after:opacity-100 md:group-focus-within:[&:not(:focus-within):not(:focus)]:after:opacity-100 after:absolute 
+            after:inset-0 after:transition-all">
+              <a className="absolute inset-0 text-white z-10" href="#0">
+                  <span className="absolute inset-x-0 bottom-0 text-lg font-medium p-6 md:px-12 md:py-8 md:whitespace-nowrap md:truncate md:opacity-0 group-focus/article:opacity-100 group-focus-within/article:opacity-100 
+                  md:translate-y-2 group-focus/article:translate-y-0 group-focus-within/article:translate-y-0 transition duration-200 ease-[cubic-bezier(.5,.85,.25,1.8)] 
+                  group-focus/article:delay-300 group-focus-within/article:delay-300">"Embrace failure as a stepping stone to success."</span>
+              </a>                    
+              <img className="object-cover h-72 md:h-[480px] md:w-auto" src="/assets/accordion/kyouka.png" width="960" height="480" alt="Image 02"></img>
+          </article>
+          <article className="group/article relative w-full grayscale hover:grayscale-0 focus:grayscale-0 focus-within:grayscale-0 shadow-[-5px_5px_5px_rgba(0,0,0,0.25)] overflow-hidden md:group-focus:[&:not(:focus)]:w-[66%] md:group-focus-within:[&:not(:focus-within):not(:focus)]:w-[66%] 
+            transition-all duration-300 before:absolute before:inset-x-0 before:bottom-0 before:h-1/3
+            before:bg-gradient-to-t before:from-black/50 before:transition-opacity md:before:opacity-0 focus:before:opacity-100 focus-within:before:opacity-100 
+            after:opacity-0 md:group-focus:[&:not(:focus)]:after:opacity-100 md:group-focus-within:[&:not(:focus-within):not(:focus)]:after:opacity-100 after:absolute 
+            after:inset-0 after:transition-all">
+              <a className="absolute inset-0 text-white z-10" href="#0">
+                  <span className="absolute inset-x-0 bottom-0 text-lg font-medium p-6 md:px-12 md:py-8 md:whitespace-nowrap md:truncate md:opacity-0 group-focus/article:opacity-100 group-focus-within/article:opacity-100 
+                  md:translate-y-2 group-focus/article:translate-y-0 group-focus-within/article:translate-y-0 transition duration-200 ease-[cubic-bezier(.5,.85,.25,1.8)] 
+                  group-focus/article:delay-300 group-focus-within/article:delay-300">"Dream big, start small, but most importantly, start."</span>
+              </a>                    
+              <img className="object-cover h-72 md:h-[480px] md:w-auto" src="/assets/accordion/suigetsu.png" width="960" height="480" alt="Image 03"></img>
+          </article>                                
+          <article className="group/article relative w-full grayscale hover:grayscale-0 focus:grayscale-0 focus-within:grayscale-0 shadow-[-5px_5px_5px_rgba(0,0,0,0.25)] overflow-hidden md:group-focus:[&:not(:focus)]:w-[66%] md:group-focus-within:[&:not(:focus-within):not(:focus)]:w-[66%] 
+            transition-all duration-300 before:absolute before:inset-x-0 before:bottom-0 before:h-1/3
+            before:bg-gradient-to-t before:from-black/50 before:transition-opacity md:before:opacity-0 focus:before:opacity-100 focus-within:before:opacity-100 
+            after:opacity-0 md:group-focus:[&:not(:focus)]:after:opacity-100 md:group-focus-within:[&:not(:focus-within):not(:focus)]:after:opacity-100 after:absolute 
+            after:inset-0 after:transition-all">
+              <a className="absolute inset-0 text-white z-10" href="#0">
+                  <span className="absolute inset-x-0 bottom-0 text-lg font-medium p-6 md:px-12 md:py-8 md:whitespace-nowrap md:truncate md:opacity-0 group-focus/article:opacity-100 group-focus-within/article:opacity-100 
+                  md:translate-y-2 group-focus/article:translate-y-0 group-focus-within/article:translate-y-0 transition duration-200 ease-[cubic-bezier(.5,.85,.25,1.8)] 
+                  group-focus/article:delay-300 group-focus-within/article:delay-300">"Dream big, start small, but most importantly, start."</span>
+              </a>                    
+              <img className="object-cover h-72 md:h-[480px] md:w-auto" src="/assets/accordion/iaido.png" width="960" height="480" alt="Image 03"></img>
+          </article>                                
+        </div>
+
+
+
+      </div>
+      
+      
+      
+      
+      
+      
+
+
+    </main>
   );
 }
