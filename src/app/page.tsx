@@ -106,8 +106,10 @@ export default function Home() {
         <div className="w-full my-[1.042vw] flex flex-col items-center justify-center relative z-2">
           <>
           <NavBar/>
+          <Hero/>
           </>
         </div>
+
 
         {/* boxes */}
         <div className="group flex w-[46.354vw] max-md:flex-col relative justify-center gap-[1.563vw] mb-8">
