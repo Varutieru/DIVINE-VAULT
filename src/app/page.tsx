@@ -103,7 +103,7 @@ export default function Home() {
         />
 
         {/*CONTENTS CONTAINER*/}
-        <div className="w-full my-[1.042vw] flex flex-col items-center justify-center relative z-2">
+        <div className="w-full flex flex-col items-center justify-center relative z-10">
           <>
           <NavBar/>
           <Hero/>
@@ -163,17 +163,8 @@ export default function Home() {
           </article>                                
         </div>
 
-
-
       </div>
       
-      
-      
-      
-      
-      
-
-
     </main>
   );
 }

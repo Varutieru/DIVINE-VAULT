@@ -29,7 +29,7 @@ export const Hero = () => {
                             className="w-full"
                         />
                     </div>
-                    <div className="text-black text-7xl mb-4">
+                    <div className="text-black text-7xl mb-4 font-neoris-medium w-full">
                         THE DIVINED APPARELS
                     </div>
                     <div className="flex flex-row gap-3 mb-6">
