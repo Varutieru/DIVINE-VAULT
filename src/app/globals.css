@@ -10,6 +10,10 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-neoris-bold: 'TT Neoris Bold', Arial, sans-serif;
+  --font-neoris-medium: 'TT Neoris Medium', Arial, sans-serif;
+  --font-neoris-regular: 'TT Neoris Regular', Arial, sans-serif;
+  --font-neotriad: 'Neotriad', Arial, sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {

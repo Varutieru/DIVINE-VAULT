@@ -8,7 +8,7 @@ export const navbarDesktop = () => {
     
     return (
         <div className="w-[97.917vw] mx-auto" style={{ margin: '0 1.042vw' }}>
-            <div className="w-full h-full flex justify-between items-center py-4">
+            <div className="w-full h-full flex justify-between items-center">
                 {/* Logo Section */}
                 <div className="w-[80px] sm:w-[100px] lg:w-[150px] h-[50px] sm:h-[60px] lg:h-[70px] flex items-center justify-center relative">
                     <Image
