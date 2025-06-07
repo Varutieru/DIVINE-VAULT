@@ -25,36 +25,35 @@
 
 @font-face {
   font-family: 'TT Neoris Bold';
-  src: url(/public/fonts/tt-neoris-bold.ttf) format('truetype');
+  src: url(/fonts/tt-neoris-bold.ttf) format('truetype');
   font-weight: 700;
   font-style: normal;
-  font-display:swap;
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'TT Neoris Medium';
-  src: url(/public/fonts/tt-neoris-medium.ttf) format('truetype');
+  src: url(/fonts/tt-neoris-medium.ttf) format('truetype');
   font-weight: 500;
   font-style: normal;
-  font-display:swap;
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'TT Neoris Regular';
-  src: url(/public/fonts/tt-neoris-reguler.ttf) format('truetype');
+  src: url(/fonts/tt-neoris-reguler.ttf) format('truetype');
   font-weight: 300;
   font-style: normal;
-  font-display:swap;
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Neotriad';
-  src: url(/public/fonts/neotriad.otf) format('opentype');
+  src: url(/fonts/neotriad.otf) format('opentype');
   font-weight: 300;
   font-style: normal;
-  font-display:swap;
+  font-display: swap;
 }
-
 
 body {
   background: var(--background);

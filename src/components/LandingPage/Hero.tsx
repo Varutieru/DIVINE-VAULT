@@ -6,7 +6,7 @@ import Image from "next/image"
 
 export const Hero = () => {
     return (
-        <div className="w-full mt-[7vw] z-100">
+        <div className="w-full mt-[2vw] z-100">
             <div className="flex flex-row pl-[9.271vw] gap-4">
                 <div className="relative text-black h-[600px] w-[49.635vw] font-neotriad">
                     <Image
@@ -79,7 +79,7 @@ export const Hero = () => {
                         relative overflow-hidden text-white shadow-2xl 
                         transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-[#050014] 
                         before:transition-all before:duration-340 hover:text-white hover:before:left-0 hover:before:w-full active:before:bg-[#A37188] active:before:transition-none">
-                            <p className="absolute w-[85%] text-[2.3vw] group/unit relative">
+                            <p className="absolute w-[85%] text-[2.3vw] group/unit">
                                 EXPLORE NOW
                             </p>
                         </Link>

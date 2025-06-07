@@ -3,97 +3,121 @@ import React, { useState } from "react";
 import Image from "next/image"
 import NavBar from "@/components/Navbar/navbarDesktop";
 import Hero from "@/components/LandingPage/Hero";
+import Accordion from "@/components/LandingPage/accordion";
 
 export default function Home() {
   return (
     <main>
-      <div className="bg-[#EAE7F0] relative overflow-hidden">
-        {/* BOTTOM LAYER */}
+      <div className="bg-[#EAE7F0] relative overflow-hidden w-[100vw] h-[100vh]">
+        {/* MAIN PAGE */}
         <Image
-          src="/assets/background/polygonRight.svg"
+          src="/assets/backgroundMain/polygonRight.svg"
           alt="Background"
           quality={100}
           width={(1920 * 2) / 3}
           height={(3148 * 2) / 3}
           sizes="100vw"
-          className="absolute z-0 top-[0] right-[0] w-auto"
+          className="absolute contain-layout z-1 top-[0] right-[-1vw] w-[15vw] h-[100vh]"
         />
         <Image
-          src="/assets/background/ornament1.svg"
+          src="/assets/backgroundMain/ornament1.svg"
           alt="Background"
           quality={100}
           width={(1920 * 2) / 3}
           height={(3148 * 2) / 3}
           sizes="100vw"
-          className="absolute z-0 top-[23.281vw] left-[5.052vw] w-auto"
+          className="absolute contain-layout z-1 top-[12vh] left-[5.052vw] w-[26.183vw] h-[72.407vh] "
         />
         <Image
-          src="/assets/background/ornament4.svg"
+          src="/assets/backgroundMain/ornament4.svg"
           alt="Background"
           quality={100}
           width={(1920 * 2) / 3}
           height={(3148 * 2) / 3}
           sizes="100vw"
-          className="absolute z-0 top-[9.01vw] left-[5.052vw] w-auto"
+          className="absolute contain-layout z-1 top-[9.01vh] left-[5.052vw] w-[16.979vw] h-[40.896vh] opacity-75"
         />
         <Image
-          src="/assets/background/ornament5.svg"
+          src="/assets/backgroundMain/ornament5.svg"
           alt="Background"
           quality={100}
           width={(1920 * 2) / 3}
           height={(3148 * 2) / 3}
           sizes="100vw"
-          className="absolute z-0 top-[33.575vw] right-[18.438vw] w-auto"
+          className="absolute contain-layout z-1 bottom-[-10vh] right-[30vw] w-[28.37vw] h-[40.278vh]"
         />
         
         {/* TOP LAYER */}
         <Image
-          src="/assets/background/grids.svg"
+          src="/assets/backgroundMain/grids.svg"
           alt="Background"
           quality={100}
           width={(1920 * 2) / 3}
           height={(3148 * 2) / 3}
           sizes="100vw"
-          className="absolute z-0 top-[1.667vw] left-[1.563vw] w-auto"
+          className="absolute z-0 contain-layout top-[1.667vh] left-[1.563vw] w-full h-full opacity-75"
         />
         <Image
-          src="/assets/background/decorationData.svg"
+          src="/assets/backgroundMain/decorationData.svg"
           alt="Background"
           quality={100}
           width={(1920 * 2) / 3}
           height={(3148 * 2) / 3}
           sizes="100vw"
-          className="absolute z-0 top-[0] right-[0] w-auto"
+          className="absolute z-2 contain-layout top-[0] right-[-8vw] w-[23.281vw] h-[31.204vh] opacity-75"
         />
         <Image
-          src="/assets/background/divider3.svg"
+          src="/assets/backgroundMain/divider3.svg"
           alt="Background"
           quality={100}
           width={(1920 * 2) / 3}
           height={(3148 * 2) / 3}
           sizes="100vw"
-          className="absolute z-0 top-[18.75vw] right-[2.604vw] w-auto"
+          className="absolute z-2 contain-layout bottom-[0] right-[2.604vw] w-[0.833vw] h-[66.574vh] opacity-75"
         />
         <Image
-          src="/assets/background/divider5.svg"
+          src="/assets/backgroundMain/divider5.svg"
           alt="Background"
           quality={100}
           width={(1920 * 2) / 3}
           height={(3148 * 2) / 3}
           sizes="100vw"
-          className="absolute z-0 top-[7.083vw] left-[1.25vw] w-auto"
+          className="absolute z-2 contain-layout bottom-[0] left-[1.25vw] w-[0.521vw] h-[87.407vh] opacity-75"
         />
         <Image
-          src="/assets/background/squareRed.svg"
+          src="/assets/backgroundMain/squareRed.svg"
           alt="Background"
           quality={100}
           width={(1920 * 2) / 3}
           height={(3148 * 2) / 3}
           sizes="100vw"
-          className="absolute z-0 top-[10.938vw] right-[17.813vw] w-auto"
+          className="absolute z-2 contain-layout top-[20vh] right-[15vw] w-[2.503vw] h-[4.39vh]"
         />
         <Image
-          src="/assets/background/squareGray.svg"
+          src="/assets/backgroundMain/squareGray.svg"
+          alt="Background"
+          quality={100}
+          width={(1920 * 2) / 3}
+          height={(3148 * 2) / 3}
+          sizes="100vw"
+          className="absolute z-2 contain-layout top-[20vh] right-[11.75vw] w-[4.39vw] h-[4.39vh]"
+        />
+
+        {/*MAIN HERO*/}
+        <div className="w-full flex flex-col items-center justify-center relative z-10">
+          <>
+          <NavBar/>
+          <Hero/>
+          </>
+        </div>
+      </div>
+
+      
+      {/* ACCORDION PAGE */}
+      <div className="bg-[#EAE7F0] relative overflow-hidden w-[100vw] h-[100vh]">
+
+        <Image
+          src="/assets/backgroundAccordion/squareGray.svg"
           alt="Background"
           quality={100}
           width={(1920 * 2) / 3}
@@ -102,65 +126,12 @@ export default function Home() {
           className="absolute z-0 top-[10.938vw] right-[14.74vw] w-auto"
         />
 
-        {/*CONTENTS CONTAINER*/}
+
+        {/* ACCORDION HERO */}
         <div className="w-full flex flex-col items-center justify-center relative z-10">
           <>
-          <NavBar/>
-          <Hero/>
+          <Accordion/>
           </>
-        </div>
-
-
-        {/* boxes */}
-        <div className="group flex w-[46.354vw] max-md:flex-col relative justify-center gap-[1.563vw] mb-8">
-          <article className="group/article relative w-full grayscale hover:grayscale-0 focus:grayscale-0 focus-within:grayscale-0 shadow-[-5px_5px_5px_rgba(0,0,0,0.25)] overflow-hidden md:group-focus:[&:not(:focus)]:w-[66%] md:group-focus-within:[&:not(:focus-within):not(:focus)]:w-[66%] 
-            transition-all duration-300 before:absolute before:inset-x-0 before:bottom-0 before:h-1/3
-            before:bg-gradient-to-t before:from-black/50 before:transition-opacity md:before:opacity-0 focus:before:opacity-100 focus-within:before:opacity-100 
-            after:opacity-0 md:group-focus:[&:not(:focus)]:after:opacity-100 md:group-focus-within:[&:not(:focus-within):not(:focus)]:after:opacity-100 after:absolute 
-            after:inset-0 after:transition-all">
-              <a className="absolute inset-0 text-white z-10" href="#0">
-                  <span className="absolute inset-x-0 bottom-0 text-lg font-medium p-6 md:px-12 md:py-8 md:whitespace-nowrap md:truncate md:opacity-0 group-focus/article:opacity-100 group-focus-within/article:opacity-100 
-                  md:translate-y-2 group-focus/article:translate-y-0 group-focus-within/article:translate-y-0 transition duration-200 ease-[cubic-bezier(.5,.85,.25,1.8)] 
-                  group-focus/article:delay-300 group-focus-within/article:delay-300">"Innovate relentlessly. Stagnation is the enemy of progress."</span>
-              </a>
-              <img className="object-cover h-72 md:h-[480px] md:w-auto" src="/assets/accordion/archangel.png" width="960" height="480" alt="Image 01"></img>
-          </article>
-          <article className="group/article relative w-full grayscale hover:grayscale-0 focus:grayscale-0 focus-within:grayscale-0 shadow-[-5px_5px_5px_rgba(0,0,0,0.25)] overflow-hidden md:group-focus:[&:not(:focus)]:w-[66%] md:group-focus-within:[&:not(:focus-within):not(:focus)]:w-[66%] 
-            transition-all duration-300 before:absolute before:inset-x-0 before:bottom-0 before:h-1/3
-            before:bg-gradient-to-t before:from-black/50 before:transition-opacity md:before:opacity-0 focus:before:opacity-100 focus-within:before:opacity-100 
-            after:opacity-0 md:group-focus:[&:not(:focus)]:after:opacity-100 md:group-focus-within:[&:not(:focus-within):not(:focus)]:after:opacity-100 after:absolute 
-            after:inset-0 after:transition-all">
-              <a className="absolute inset-0 text-white z-10" href="#0">
-                  <span className="absolute inset-x-0 bottom-0 text-lg font-medium p-6 md:px-12 md:py-8 md:whitespace-nowrap md:truncate md:opacity-0 group-focus/article:opacity-100 group-focus-within/article:opacity-100 
-                  md:translate-y-2 group-focus/article:translate-y-0 group-focus-within/article:translate-y-0 transition duration-200 ease-[cubic-bezier(.5,.85,.25,1.8)] 
-                  group-focus/article:delay-300 group-focus-within/article:delay-300">"Embrace failure as a stepping stone to success."</span>
-              </a>                    
-              <img className="object-cover h-72 md:h-[480px] md:w-auto" src="/assets/accordion/kyouka.png" width="960" height="480" alt="Image 02"></img>
-          </article>
-          <article className="group/article relative w-full grayscale hover:grayscale-0 focus:grayscale-0 focus-within:grayscale-0 shadow-[-5px_5px_5px_rgba(0,0,0,0.25)] overflow-hidden md:group-focus:[&:not(:focus)]:w-[66%] md:group-focus-within:[&:not(:focus-within):not(:focus)]:w-[66%] 
-            transition-all duration-300 before:absolute before:inset-x-0 before:bottom-0 before:h-1/3
-            before:bg-gradient-to-t before:from-black/50 before:transition-opacity md:before:opacity-0 focus:before:opacity-100 focus-within:before:opacity-100 
-            after:opacity-0 md:group-focus:[&:not(:focus)]:after:opacity-100 md:group-focus-within:[&:not(:focus-within):not(:focus)]:after:opacity-100 after:absolute 
-            after:inset-0 after:transition-all">
-              <a className="absolute inset-0 text-white z-10" href="#0">
-                  <span className="absolute inset-x-0 bottom-0 text-lg font-medium p-6 md:px-12 md:py-8 md:whitespace-nowrap md:truncate md:opacity-0 group-focus/article:opacity-100 group-focus-within/article:opacity-100 
-                  md:translate-y-2 group-focus/article:translate-y-0 group-focus-within/article:translate-y-0 transition duration-200 ease-[cubic-bezier(.5,.85,.25,1.8)] 
-                  group-focus/article:delay-300 group-focus-within/article:delay-300">"Dream big, start small, but most importantly, start."</span>
-              </a>                    
-              <img className="object-cover h-72 md:h-[480px] md:w-auto" src="/assets/accordion/suigetsu.png" width="960" height="480" alt="Image 03"></img>
-          </article>                                
-          <article className="group/article relative w-full grayscale hover:grayscale-0 focus:grayscale-0 focus-within:grayscale-0 shadow-[-5px_5px_5px_rgba(0,0,0,0.25)] overflow-hidden md:group-focus:[&:not(:focus)]:w-[66%] md:group-focus-within:[&:not(:focus-within):not(:focus)]:w-[66%] 
-            transition-all duration-300 before:absolute before:inset-x-0 before:bottom-0 before:h-1/3
-            before:bg-gradient-to-t before:from-black/50 before:transition-opacity md:before:opacity-0 focus:before:opacity-100 focus-within:before:opacity-100 
-            after:opacity-0 md:group-focus:[&:not(:focus)]:after:opacity-100 md:group-focus-within:[&:not(:focus-within):not(:focus)]:after:opacity-100 after:absolute 
-            after:inset-0 after:transition-all">
-              <a className="absolute inset-0 text-white z-10" href="#0">
-                  <span className="absolute inset-x-0 bottom-0 text-lg font-medium p-6 md:px-12 md:py-8 md:whitespace-nowrap md:truncate md:opacity-0 group-focus/article:opacity-100 group-focus-within/article:opacity-100 
-                  md:translate-y-2 group-focus/article:translate-y-0 group-focus-within/article:translate-y-0 transition duration-200 ease-[cubic-bezier(.5,.85,.25,1.8)] 
-                  group-focus/article:delay-300 group-focus-within/article:delay-300">"Dream big, start small, but most importantly, start."</span>
-              </a>                    
-              <img className="object-cover h-72 md:h-[480px] md:w-auto" src="/assets/accordion/iaido.png" width="960" height="480" alt="Image 03"></img>
-          </article>                                
         </div>
 
       </div>
