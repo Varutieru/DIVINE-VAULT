@@ -8,7 +8,8 @@ import Accordion from "@/components/LandingPage/accordion";
 export default function Home() {
   return (
     <main>
-      <div className="bg-[#EAE7F0] relative overflow-hidden w-[100vw] h-[100vh]">
+      <div className="bg-[#EAE7F0] relative overflow-hidden w-[100%] h-[100%] max-w-[100vw] max-h-[100vh]"
+      style={{ aspectRatio: '16/9' }}>
         {/* MAIN PAGE */}
         <Image
           src="/assets/backgroundMain/polygonRight.svg"
@@ -17,7 +18,7 @@ export default function Home() {
           width={(1920 * 2) / 3}
           height={(3148 * 2) / 3}
           sizes="100vw"
-          className="absolute contain-layout z-1 top-[0] right-[-1vw] w-[15vw] h-[100vh]"
+          className="absolute contain-layout z-1 top-[0] right-[-3.5vw] w-[15vw] h-[100vh]"
         />
         <Image
           src="/assets/backgroundMain/ornament1.svg"
@@ -44,7 +45,7 @@ export default function Home() {
           width={(1920 * 2) / 3}
           height={(3148 * 2) / 3}
           sizes="100vw"
-          className="absolute contain-layout z-1 bottom-[-10vh] right-[30vw] w-[28.37vw] h-[40.278vh]"
+          className="absolute contain-layout z-1 bottom-[0] right-[30vw] w-[28.37vw] h-[40.278vh]"
         />
         
         {/* TOP LAYER */}
@@ -114,17 +115,21 @@ export default function Home() {
 
       
       {/* ACCORDION PAGE */}
-      <div className="bg-[#EAE7F0] relative overflow-hidden w-[100vw] h-[100vh]">
+      <div className="bg-[#EAE7F0] absolute overflow-hidden w-full h-[100vh]">
 
-        <Image
-          src="/assets/backgroundAccordion/squareGray.svg"
-          alt="Background"
-          quality={100}
-          width={(1920 * 2) / 3}
-          height={(3148 * 2) / 3}
-          sizes="100vw"
-          className="absolute z-0 top-[10.938vw] right-[14.74vw] w-auto"
-        />
+        <div 
+          className="absolute top-0 left-0 w-full"
+          style={{ aspectRatio: '16/9' }}
+        >
+          <Image
+            src="/assets/backgroundAccordion/Static/bottom-layer.svg"
+            alt="Background"
+            quality={100}
+            fill={true}
+            sizes="100vw"
+            className="object-cover"
+            />
+        </div>
 
 
         {/* ACCORDION HERO */}

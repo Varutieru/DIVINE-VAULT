@@ -52,7 +52,7 @@ export const navbarDesktop = () => {
                             className="object-contain cursor-pointer hover:opacity-80"
                         />
                     </div>
-                    <div className="w-[100px] sm:w-[120px] lg:w-[140px] h-[40px] sm:h-[48px] lg:h-[54px] bg-[#000000] flex items-center justify-center text-sm sm:text-base lg:text-lg text-[#ffffff] cursor-pointer hover:bg-gray-800 transition-colors duration-200">
+                    <div className="w-[100px] sm:w-[120px] lg:w-[140px] h-[40px] sm:h-[48px] lg:h-[54px] bg-[#000000] flex items-center justify-center text-sm sm:text-base lg:text-lg text-[#ffffff] cursor-pointer hover:bg-gray-800 transition-colors duration-200 font-neotriad">
                         SIGN IN
                     </div>
                 </div>

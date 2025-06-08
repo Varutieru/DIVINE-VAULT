@@ -6,7 +6,7 @@ import Image from "next/image"
 
 export const Hero = () => {
     return (
-        <div className="w-full mt-[2vw] z-100">
+        <div className="w-full mt-[4vh] z-100">
             <div className="flex flex-row pl-[9.271vw] gap-4">
                 <div className="relative text-black h-[600px] w-[49.635vw] font-neotriad">
                     <Image
