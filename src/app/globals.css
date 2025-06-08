@@ -16,6 +16,14 @@
   --font-neotriad: 'Neotriad', Arial, sans-serif;
 }
 
+@theme {
+    --color-magnolia: #eae7f0;
+    --color-thistle: #debdd0;
+    --color-mountbattenPink: #a37188;
+    --color-munsellRed: #f2013c;
+    --color-blackRich: #050014;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;

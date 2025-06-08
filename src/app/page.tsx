@@ -8,8 +8,12 @@ import Accordion from "@/components/LandingPage/accordion";
 export default function Home() {
   return (
     <main>
+<<<<<<< HEAD
       <div className="bg-[#EAE7F0] relative overflow-hidden w-[100%] h-[100%] max-w-[100vw] max-h-[100vh]"
       style={{ aspectRatio: '16/9' }}>
+=======
+      <div className="bg-[#EAE7F0] relative overflow-hidden w-[100%] h-[100%]">
+>>>>>>> 585dcbba4fd4d08583237a07764677cc67082ca2
         {/* MAIN PAGE */}
         <Image
           src="/assets/backgroundMain/polygonRight.svg"

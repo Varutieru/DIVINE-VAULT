@@ -22,9 +22,9 @@ export const navbarDesktop = () => {
                 
                 {/* Navigation Links */}
                 <div className="hidden md:flex flex-1 max-w-2xl justify-around items-center text-sm lg:text-lg font-semibold text-[#000000] mx-8">
-                    <div className="hover:text-[#F2013C] cursor-pointer transition-colors duration-200">
+                    <a className="hover:text-[#F2013C] cursor-pointer transition-colors duration-200" href="/catalogue">
                         CATALOGUE
-                    </div>
+                    </a>
                     <div className="hover:text-[#F2013C] cursor-pointer transition-colors duration-200">
                         ABOUT US
                     </div>
