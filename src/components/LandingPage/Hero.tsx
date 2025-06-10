@@ -4,6 +4,14 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import Image from "next/image"
 
+const scrollToSection = () => {
+  const targetElement = document.getElementById('accordionPage');
+  targetElement?.scrollIntoView({ 
+    behavior: 'smooth',
+    block: 'start' 
+  });
+};
+
 export const Hero = () => {
     return (
         <div className="w-full mt-[4vh] z-100">
@@ -16,7 +24,7 @@ export const Hero = () => {
                         width={(1920 * 2) / 3}
                         height={(3148 * 2) / 3}
                         sizes="100vw"
-                        className="w-[10%] mb-8"
+                        className="w-[10%] mb-8 neon-flicker-in"
                     />
                     <div className="items-center text-black mb-6">
                         <Image
@@ -26,7 +34,7 @@ export const Hero = () => {
                             width={(1920 * 2) / 3}
                             height={(3148 * 2) / 3}
                             sizes="100vw"
-                            className="w-full"
+                            className="w-full cyber-static"
                         />
                     </div>
                     <div className="items-center text-black mb-7">
@@ -37,7 +45,7 @@ export const Hero = () => {
                             width={(1920 * 2) / 3}
                             height={(3148 * 2) / 3}
                             sizes="100vw"
-                            className="w-full"
+                            className="w-full neon-flicker-in"
                         />
                     </div>
                     {/* <div className="leading-none text-black text-[4.814vw] mb-2">
@@ -73,8 +81,9 @@ export const Hero = () => {
                         />
                     </div>
                     <div className="hover:drop-shadow-[20px_10px_0_rgba(242,1,60,1)] w-[18vw] h-[3.125vw] z-1 transition-all duration-340">
-                        <Link
-                        href={''}
+                        <button
+                            onClick={scrollToSection}
+                            type="button"
                         className="flex items-center text-center mask-linear-128 mask-linear-from-85% mask-linear-to-85% bg-[#F2013C] w-[19vw] h-[3.125vw] z-1
                         relative overflow-hidden text-white shadow-2xl 
                         transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-[#050014] 
@@ -82,7 +91,7 @@ export const Hero = () => {
                             <p className="absolute w-[85%] text-[2.3vw] group/unit">
                                 EXPLORE NOW
                             </p>
-                        </Link>
+                        </button>
                     </div>
                 </div>
                 <div className="w-[40vw] h-[53vw] pl-16">

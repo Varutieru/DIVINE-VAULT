@@ -63,6 +63,344 @@
   font-display: swap;
 }
 
+/* Animation Keyframes */
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slide-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-in-bottom {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-in-above1 {
+  from {
+    opacity: 0;
+    transform: translateY(-20vh);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-in-above2 {
+  from {
+    opacity: 0;
+    transform: translateY(-40vh);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-in-above3 {
+  from {
+    opacity: 0;
+    transform: translateY(-50vh);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-in-above4 {
+  from {
+    opacity: 0;
+    transform: translateY(-60vh);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-in-above5 {
+  from {
+    opacity: 0;
+    transform: translateY(-80vh);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-in-above6 {
+  from {
+    opacity: 0;
+    transform: translateY(-90vh);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes grow-vertical {
+  from {
+    opacity: 0;
+    transform: scaleY(0);
+    transform-origin: bottom;
+  }
+  to {
+    opacity: 0.75;
+    transform: scaleY(1);
+    transform-origin: bottom;
+  }
+}
+
+@keyframes bounce-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.3) translateY(-50px);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1) translateY(-10px);
+  }
+  70% {
+    transform: scale(0.9) translateY(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.75; }
+  50% { opacity: 1; }
+}
+
+/* Animation Classes */
+.animate-fade-in {
+  animation: fade-in 2s ease-out forwards;
+}
+
+.animate-slide-in-right {
+  animation: slide-in-right 2.4s ease-out forwards;
+}
+
+.animate-slide-in-left {
+  animation: slide-in-left 3s ease-out forwards;
+}
+
+.animate-slide-in-bottom {
+  animation: slide-in-bottom 1.3s ease-out forwards;
+}
+
+.animate-slide-in-above1 {
+  animation: slide-in-above 1.5s ease-out forwards;
+}
+
+.animate-slide-in-above2 {
+  animation: slide-in-above 1.5s ease-out forwards;
+}
+
+.animate-slide-in-above3 {
+  animation: slide-in-above 1.5s ease-out forwards;
+}
+
+.animate-slide-in-above4 {
+  animation: slide-in-above 1.5s ease-out forwards;
+}
+
+.animate-slide-in-above5 {
+  animation: slide-in-above 1.5s ease-out forwards;
+}
+
+.animate-slide-in-above6 {
+  animation: slide-in-above 1.5s ease-out forwards;
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 1.5s ease-out forwards;
+}
+
+.animate-grow-vertical {
+  animation: grow-vertical 2s ease-out forwards;
+}
+
+.animate-bounce-in {
+  animation: bounce-in 1s ease-out forwards;
+}
+
+/* Animation Delays */
+.animation-delay-100 { animation-delay: 0.1s; }
+.animation-delay-200 { animation-delay: 0.2s; }
+.animation-delay-400 { animation-delay: 0.4s; }
+.animation-delay-600 { animation-delay: 0.6s; }
+.animation-delay-800 { animation-delay: 0.8s; }
+.animation-delay-1000 { animation-delay: 1s; }
+.animation-delay-1200 { animation-delay: 1.2s; }
+.animation-delay-1400 { animation-delay: 1.4s; }
+.animation-delay-1600 { animation-delay: 1.6s; }
+.animation-delay-1800 { animation-delay: 1.8s; }
+.animation-delay-2000 { animation-delay: 2s; }
+
+/* Hover Effects */
+.hover-animate-pulse:hover {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes cyber-glitch {
+  0% { clip-path: inset(0 0 0 0); transform: translate(0, 0); }
+  10% { clip-path: inset(20% 0 30% 0); transform: translate(-2px, -2px); }
+  20% { clip-path: inset(40% 0 20% 0); transform: translate(2px, 2px); }
+  30% { clip-path: inset(10% 0 40% 0); transform: translate(-1px, 1px); }
+  40% { clip-path: inset(30% 0 10% 0); transform: translate(1px, -1px); }
+  50% { clip-path: inset(0 0 0 0); transform: translate(0, 0); }
+  100% { clip-path: inset(0 0 0 0); transform: translate(0, 0); }
+}
+
+.cybr-btn {
+  position: relative;
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: #000;
+  color: #0ff;
+  border: 2px solid #0ff;
+  text-transform: uppercase;
+  font-family: var(--font-neoris-bold);
+  letter-spacing: 2px;
+  overflow: hidden;
+  cursor: pointer;
+  clip-path: polygon(0 0, 100% 0%, 95% 100%, 5% 100%);
+  transition: background 0.2s ease;
+}
+
+.cybr-btn:hover {
+  background: #0ff;
+  color: #000;
+}
+
+.cybr-btn::before,
+.cybr-btn::after {
+  content: attr(data-glitch);
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  color: #f0f;
+  background: #000;
+  overflow: hidden;
+  pointer-events: none;
+  clip-path: polygon(0 0, 100% 0%, 95% 100%, 5% 100%);
+}
+
+.cybr-btn::before {
+  animation: cyber-glitch 2s infinite;
+  opacity: 0.8;
+  transform: translate(-2px, 0);
+}
+
+.cybr-btn::after {
+  animation: cyber-glitch 2s infinite reverse;
+  color: #0ff;
+  transform: translate(2px, 0);
+  opacity: 0.5;
+}
+
+@keyframes neon-flicker-in {
+  0%, 5%, 15%, 25% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  10%, 20%, 30% {
+    opacity: 1;
+    text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff;
+  }
+  100% {
+    opacity: 1;
+    text-shadow: 0 0 5px #00ffff;
+  }
+}
+
+@keyframes ghost-flicker {
+  0%, 100% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  75% {
+    opacity: 0.1;
+  }
+}
+
+@keyframes cyber-static {
+  0% {
+    filter: contrast(1) brightness(1);
+  }
+  10% {
+    filter: contrast(2) brightness(0.8);
+  }
+  20% {
+    filter: contrast(0.5) brightness(1.5);
+  }
+  30% {
+    filter: contrast(3) brightness(0.5);
+  }
+  40% {
+    filter: contrast(1) brightness(2);
+  }
+  50% {
+    filter: contrast(2.5) brightness(0.3);
+  }
+  100% {
+    filter: contrast(1) brightness(1);
+  }
+}
+
+.neon-flicker-in { animation: neon-flicker-in 4s ease-out forwards; }
+.ghost-flicker { animation: ghost-flicker 2s ease-out forwards; }
+.cyber-static { animation: cyber-static 2s ease-out forwards; }
+
 body {
   background: var(--background);
   color: var(--foreground);

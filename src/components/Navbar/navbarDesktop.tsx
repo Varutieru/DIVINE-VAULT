@@ -10,7 +10,7 @@ export const navbarDesktop = () => {
         <div className="w-[97.917vw] mx-auto" style={{ margin: '0 1.042vw' }}>
             <div className="w-full h-full flex justify-between items-center">
                 {/* Logo Section */}
-                <div className="w-[80px] sm:w-[100px] lg:w-[150px] h-[50px] sm:h-[60px] lg:h-[70px] flex items-center justify-center relative">
+                <div className="w-[80px] sm:w-[100px] lg:w-[150px] h-[50px] sm:h-[60px] lg:h-[70px] flex items-center justify-center relative animate-slide-in-above1">
                     <Image
                         src="/assets/navbar/logo-divine-vault.svg"
                         alt="Divine Vault Logo"
@@ -22,13 +22,13 @@ export const navbarDesktop = () => {
                 
                 {/* Navigation Links */}
                 <div className="hidden md:flex flex-1 max-w-2xl justify-around items-center text-sm lg:text-lg font-semibold text-[#000000] mx-8">
-                    <a className="hover:text-[#F2013C] cursor-pointer transition-colors duration-200" href="/catalogue">
+                    <a className="hover:text-[#F2013C] cursor-pointer transition-colors duration-200 font-neoris-medium animate-slide-in-above2" href="/app/Catalogue/page.tsx">
                         CATALOGUE
                     </a>
-                    <div className="hover:text-[#F2013C] cursor-pointer transition-colors duration-200">
+                    <div className="hover:text-[#F2013C] cursor-pointer transition-colors duration-200 font-neoris-medium animate-slide-in-above3">
                         ABOUT US
                     </div>
-                    <div className="hover:text-[#F2013C] cursor-pointer transition-colors duration-200">
+                    <div className="hover:text-[#F2013C] cursor-pointer transition-colors duration-200 font-neoris-medium animate-slide-in-above4">
                         CONTACT
                     </div>
                 </div>
@@ -44,7 +44,7 @@ export const navbarDesktop = () => {
                 
                 {/* Cart and Sign In Section */}
                 <div className="flex items-center gap-2 sm:gap-4">
-                    <div className="w-[30px] sm:w-[40px] lg:w-[50px] h-[30px] sm:h-[40px] lg:h-[50px] relative">
+                    <div className="w-[30px] sm:w-[40px] lg:w-[50px] h-[30px] sm:h-[40px] lg:h-[50px] relative animate-slide-in-above5">
                         <Image
                             src="/assets/navbar/logo-cart.svg"
                             alt="Shopping Cart Icon"
@@ -52,7 +52,8 @@ export const navbarDesktop = () => {
                             className="object-contain cursor-pointer hover:opacity-80"
                         />
                     </div>
-                    <div className="w-[100px] sm:w-[120px] lg:w-[140px] h-[40px] sm:h-[48px] lg:h-[54px] bg-[#000000] flex items-center justify-center text-sm sm:text-base lg:text-lg text-[#ffffff] cursor-pointer hover:bg-gray-800 transition-colors duration-200 font-neotriad">
+                    <div className="w-[100px] sm:w-[120px] lg:w-[140px] h-[40px] sm:h-[48px] lg:h-[54px] bg-[#000000] flex items-center justify-center text-sm
+                        sm:text-base lg:text-lg text-[#ffffff] cursor-pointer hover:bg-gray-800 transition-colors duration-200 font-neotriad animate-slide-in-above6">
                         SIGN IN
                     </div>
                 </div>
