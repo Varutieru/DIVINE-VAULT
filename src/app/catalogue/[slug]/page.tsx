@@ -1,6 +1,7 @@
 import Image from "next/image";
 import products from "../../../../data/products";
 import NavBar from "@/components/Navbar/navbarDesktop";
+import Footer from "@/components/Footer";
 
 type ProductSlug = keyof typeof products;
 
@@ -48,13 +49,13 @@ export default async function ProductPage({ params }: ProductPageProps) {
             <div className="pl-16 w-[27vw]">
                 <h1 className="font-neoris text-xl mb-4">{product.productName}</h1>
                 <p>Select Size:</p>
-                <button className="bg-thistle border text-2xl">pura-puranya tombol2 pilih size</button>
+                <button className="bg-thistle active:bg-mountbattenPink border text-2xl cursor-pointer">pura-puranya tombol2 pilih size</button>
                 <p className="mb-12">Ukuran: Unisex XXXXXL</p>
-                <h1 className="font-neoris-bold text-2xl">{product.productPrice}</h1>
+                <h1 className="font-neoris-bold text-3xl">{product.productPrice}</h1>
                 <p className="mb-6">Limited Store Dibuat dari Bahan Bukan Daur Ulang</p>
-                <button className="bg-thistle border w-[50%]">pura-puranya tombol2 pilih banyak yg mau dibeli</button>
+                <button className="bg-thistle active:bg-mountbattenPink border w-[50%] cursor-pointer">pura-puranya tombol2 pilih banyak yg mau dibeli</button>
                 <p>Stok tersedia</p>
-                <button className="bg-black w-full text-white border mt-16 p-2">Tambahkan ke keranjang</button>
+                <button className="bg-black active:bg-mountbattenPink w-full text-white border mt-16 p-2 cursor-pointer">Tambahkan ke keranjang</button>
                 <p className="mt-16">{product.description}</p>
             </div>
         </div>
@@ -103,11 +104,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
             </div>
         </div>
       </div>
-      <div className="bg-black flex justify-center items-center w-full h-[50vh]">
-          <p className="text-[13.6vw] text-magnolia font-neotriad leading-none drop-shadow-xl">
-            pura-puranya ini footer
-          </p>
-      </div>
+      <Footer/>
     </div>
   );
 }

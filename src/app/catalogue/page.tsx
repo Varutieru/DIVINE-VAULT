@@ -4,6 +4,7 @@ import Image from "next/image"
 import Link from "next/link";
 import NavBar from "@/components/Navbar/navbarDesktop";
 import products from "../../../data/products";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -66,16 +67,12 @@ export default function Home() {
                 width={(1920 * 2) / 3}
                 height={(3148 * 2) / 3}
                 sizes="100vw"
-                className="scale-75 -rotate-25 -translate-x-[12vw] -translate-[35vh]"
+                className="scale-75 -rotate-25 -translate-x-[12vw] -translate-[35vh] drop-shadow-xl"
             >
             </Image>
         </div>
       </div>
-      <div className="bg-black flex justify-center items-center w-full h-[50vh]">
-            <p className="text-[13.6vw] text-magnolia font-neotriad leading-none drop-shadow-xl">
-                pura-puranya ini footer
-            </p>
-      </div>
+      <Footer/>
     </main>
   );
 }
