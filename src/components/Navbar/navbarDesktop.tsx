@@ -22,7 +22,7 @@ export const navbarDesktop = () => {
                 
                 {/* Navigation Links */}
                 <div className="hidden md:flex flex-1 max-w-2xl justify-around items-center text-sm lg:text-lg font-semibold text-[#000000] mx-8">
-                    <a className="hover:text-[#F2013C] cursor-pointer transition-colors duration-200 font-neoris-medium animate-slide-in-above2" href="/app/Catalogue/page.tsx">
+                    <a className="hover:text-[#F2013C] cursor-pointer transition-colors duration-200 font-neoris-medium animate-slide-in-above2" href="/catalogue">
                         CATALOGUE
                     </a>
                     <div className="hover:text-[#F2013C] cursor-pointer transition-colors duration-200 font-neoris-medium animate-slide-in-above3">

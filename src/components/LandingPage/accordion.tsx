@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image"
 
@@ -9,8 +9,13 @@ interface AccordionProps {
 
 export const Accordion: React.FC<AccordionProps> = ({ onImageChange}) => {
     
-
     const [activeArticle, setActiveArticle] = useState<number | null>(null);
+    const [isAnimating, setIsAnimating] = useState(false);
+    const [currentTitleSrc, setCurrentTitleSrc] = useState<string>("");
+    const [currentDescriptionSrc, setCurrentDescriptionSrc] = useState<string>("");
+    const [currentBottomBG, setCurrentBottomBG] = useState<string>("");
+    const [currentTopBG, setCurrentTopBG] = useState<string>("");
+    const [showNewContent, setShowNewContent] = useState(false);
 
     const imageMap = {
         0: {
@@ -43,55 +48,95 @@ export const Accordion: React.FC<AccordionProps> = ({ onImageChange}) => {
         top: "/assets/backgroundAccordion/Static/top-layer.svg",
         bottom: "/assets/backgroundAccordion/Static/bottom-layer.svg",
         title: "/assets/backgroundAccordion/Static/title.svg",
-        description: "/assets/backgroundAccordion/Static/desc.svg"
+        description: "/assets/backgroundAccordion/Static/description.svg"
     }
+
+    useEffect(() => {
+        setCurrentTitleSrc(defaultImage.title);
+        setCurrentDescriptionSrc(defaultImage.description);
+        setCurrentBottomBG(defaultImage.bottom);
+        setCurrentTopBG(defaultImage.top);
+    }, []);
 
     const handleArticleClick = (index: number, event: React.MouseEvent) => {
         event.preventDefault();
         
-        if (activeArticle === index) {
-            setActiveArticle(null);
-            onImageChange(
-                defaultImage.top,
-                defaultImage.bottom,
-                defaultImage.title,
-                defaultImage.description,
-            );
-        } else {
-            setActiveArticle(index);
-            const selectedImages = (imageMap[index as keyof typeof imageMap]);
-            onImageChange(
-                selectedImages.top,
-                selectedImages.bottom,
-                selectedImages.title,
-                selectedImages.description,
-            );
-        }
+        setIsAnimating(true);
+        
+        setTimeout(() => {
+            if (activeArticle === index) {
+                setActiveArticle(null);
+                setCurrentTitleSrc(defaultImage.title);
+                setCurrentDescriptionSrc(defaultImage.description);
+                setCurrentBottomBG(defaultImage.bottom);
+                setCurrentTopBG(defaultImage.top);
+                onImageChange(
+                    defaultImage.top,
+                    defaultImage.bottom,
+                    defaultImage.title,
+                    defaultImage.description,
+                );
+            } else {
+                setActiveArticle(index);
+                const selectedImages = (imageMap[index as keyof typeof imageMap]);
+                setCurrentTitleSrc(selectedImages.title);
+                setCurrentDescriptionSrc(selectedImages.description);
+                setCurrentBottomBG(selectedImages.bottom);
+                setCurrentTopBG(selectedImages.top);
+                onImageChange(
+                    selectedImages.top,
+                    selectedImages.bottom,
+                    selectedImages.title,
+                    selectedImages.description,
+                );
+                setShowNewContent(false);
+                setTimeout(() => setShowNewContent(true), 200);
+            }
+            setTimeout(() => setIsAnimating(false), 400);
+        }, 200);
     };
 
     return (
         <div className="absolute flex justify-center items-center w-full z-100">
-            <div className="flex flex-row place-items-center-safe justify-center pl-[7vw] pr-[5vw] gap-[5vw]">
+            <div className="flex abs flex-row place-items-center-safe justify-center pl-[7vw] pr-[5vw] gap-[5vw]">
                 <div className="relative p-[0.625vw] flex flex-col w-[30.938vw] h-[45vh] gap-[1.5vw]">
-                    <Image
-                        src={activeArticle !== null ? imageMap[activeArticle as keyof typeof imageMap].title : defaultImage.title}
-                        alt="Title"
-                        width={(1920 * 2) / 3}
-                        height={(3148 * 2) / 3}
-                        sizes="100vw"
-                        className="w-full"
-                    >
-                    </Image>
-                    <Image
-                        src={activeArticle !== null ? imageMap[activeArticle as keyof typeof imageMap].description : defaultImage.description}
-                        alt="Description"
-                        width={(1920 * 2) / 3}
-                        height={(3148 * 2) / 3}
-                        sizes="100vw"
-                        className="w-full"
-                    >
-                    </Image>
-                    <div className="hover:drop-shadow-[20px_10px_0_rgba(242,1,60,1)] w-[18vw] h-[3.125vw] z-1 transition-all duration-340 align-self-">
+
+                    {/* Title */}
+                    <div className={`relative overflow-hidden ${isAnimating ? 'animate-fade-out' : 'animate-fade-in'}`}>
+                        {currentTitleSrc && showNewContent && (
+                            <Image
+                                src={currentTitleSrc}
+                                alt="Title"
+                                width={(1920 * 2) / 3}
+                                height={(3148 * 2) / 3}
+                                sizes="100vw"
+                                className="w-full"
+                                onError={(e) => {
+                                    console.log('Title image failed to load:', e.currentTarget.src);
+                                }}
+                            />
+                        )}
+                    </div>
+                    
+                    {/* Description */}
+                    <div className={`relative overflow-hidden ${isAnimating ? 'animate-fade-out' : 'animate-fade-in'}`}>
+                        {currentDescriptionSrc && showNewContent && (
+                            <Image
+                                src={currentDescriptionSrc}
+                                alt="Description"
+                                width={(1920 * 2) / 3}
+                                height={(3148 * 2) / 3}
+                                sizes="100vw"
+                                className="w-full"
+                                onError={(e) => {
+                                    console.log('Description image failed to load:', e.currentTarget.src);
+                                }}
+                            />
+                        )}
+                    </div>
+                    
+                    {/* Button */}
+                    <div className="absolute mt-[18vw] hover:drop-shadow-[20px_10px_0_rgba(242,1,60,1)] w-[18vw] h-[3.125vw] z-1 transition-all duration-340 align-self-">
                         <button
                             type="button"
                             className="flex items-center text-center mask-linear-128 mask-linear-from-85% mask-linear-to-85% bg-[#F2013C] w-[19vw] h-[3.125vw] z-1
