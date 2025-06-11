@@ -152,10 +152,9 @@ export const Accordion: React.FC<AccordionProps> = ({ onImageChange}) => {
                 <div className="group flex justify-center place-items-center-safe w-[45vw] h-[70vh]
                                 max-md:flex-col gap-[1.563vw] m-[1vw]">
                     {/* Archangel Article */}
-                    <article className={`group/article relative w-full grayscale hover:grayscale-0
+                    <article className={`group/article relative w-full h-full grayscale hover:grayscale-0
                                         shadow-[-5px_5px_5px_rgba(0,0,0,0.25)] overflow-hidden transition-all duration-300
-                                        before:absolute before:inset-x-0 before:bottom-0 before:h-1/3 before:bg-gradient-to-t
-                                        before:from-black/50 before:transition-opacity before:opacity-0 after:opacity-0
+                                        after:opacity-0
                                         after:absolute after:inset-0 after:transition-all 
                                         ${
                                             activeArticle === 0 ? 'grayscale-0 before:opacity-100' : ''}
@@ -173,14 +172,13 @@ export const Accordion: React.FC<AccordionProps> = ({ onImageChange}) => {
                                 ${activeArticle === 0 ? 'opacity-100 translate-y-0 delay-300' : 'md:opacity-0 md:translate-y-2'}`}>
                             </span>
                         </a>
-                        <img className="object-cover h-72 md:h-[480px] md:w-auto" src="/assets/accordion/archangel.png" width="960" height="480" alt="Archangel"></img>
+                        <img className="object-cover h-72 md:h-full md:w-auto" src="/assets/accordion/archangel.png" width="960" height="480" alt="Archangel"></img>
                     </article>
                     
                     {/* Kyouka Article */}
-                    <article className={`group/article relative w-full grayscale hover:grayscale-0
+                    <article className={`group/article relative w-full h-full grayscale hover:grayscale-0
                                         shadow-[-5px_5px_5px_rgba(0,0,0,0.25)] overflow-hidden transition-all duration-300
-                                        before:absolute before:inset-x-0 before:bottom-0 before:h-1/3 before:bg-gradient-to-t
-                                        before:from-black/50 before:transition-opacity before:opacity-0 after:opacity-0
+                                        after:opacity-0
                                         after:absolute after:inset-0 after:transition-all
                                         ${
                                             activeArticle === 1 ? 'grayscale-0 before:opacity-100' : ''
@@ -198,14 +196,13 @@ export const Accordion: React.FC<AccordionProps> = ({ onImageChange}) => {
                                 ${activeArticle === 1 ? 'opacity-100 translate-y-0 delay-300' : 'md:opacity-0 md:translate-y-2'}`}>
                             </span>
                         </a>                    
-                        <img className="object-cover h-72 md:h-[480px] md:w-auto" src="/assets/accordion/kyouka.png" width="960" height="480" alt="Kyouka"></img>
+                        <img className="object-cover h-72 md:h-full md:w-auto" src="/assets/accordion/kyouka.png" width="960" height="480" alt="Kyouka"></img>
                     </article>
                     
                     {/* Suigetsu Article */}
-                    <article className={`group/article relative w-full grayscale hover:grayscale-0
+                    <article className={`group/article relative w-full h-full grayscale hover:grayscale-0
                                         shadow-[-5px_5px_5px_rgba(0,0,0,0.25)] overflow-hidden transition-all duration-300
-                                        before:absolute before:inset-x-0 before:bottom-0 before:h-1/3 before:bg-gradient-to-t 
-                                        before:from-black/50 before:transition-opacity before:opacity-0 after:opacity-0
+                                        after:opacity-0
                                         after:absolute after:inset-0 after:transition-all 
                                         ${
                                             activeArticle === 2 ? 'grayscale-0 before:opacity-100' : ''
@@ -223,14 +220,13 @@ export const Accordion: React.FC<AccordionProps> = ({ onImageChange}) => {
                                 ${activeArticle === 2 ? 'opacity-100 translate-y-0 delay-300' : 'md:opacity-0 md:translate-y-2'}`}>
                             </span>
                         </a>                    
-                        <img className="object-cover h-72 md:h-[480px] md:w-auto" src="/assets/accordion/suigetsu.png" width="960" height="480" alt="Suigetsu"></img>
+                        <img className="object-cover h-72 md:h-full md:w-auto" src="/assets/accordion/suigetsu.png" width="960" height="480" alt="Suigetsu"></img>
                     </article>                                
                     
                     {/* Iaido Article */}
-                    <article className={`group/article relative w-full grayscale hover:grayscale-0
+                    <article className={`group/article relative w-full h-full grayscale hover:grayscale-0
                                         shadow-[-5px_5px_5px_rgba(0,0,0,0.25)] overflow-hidden transition-all duration-300
-                                        before:absolute before:inset-x-0 before:bottom-0 before:h-1/3 before:bg-gradient-to-t
-                                        before:from-black/50 before:transition-opacity before:opacity-0 after:opacity-0
+                                        after:opacity-0
                                         after:absolute after:inset-0 after:transition-all 
                                         ${
                                             activeArticle === 3 ? 'grayscale-0 before:opacity-100' : ''
@@ -248,7 +244,7 @@ export const Accordion: React.FC<AccordionProps> = ({ onImageChange}) => {
                                 ${activeArticle === 3 ? 'opacity-100 translate-y-0 delay-300' : 'md:opacity-0 md:translate-y-2'}`}>
                             </span>
                         </a>                    
-                        <img className="object-cover h-72 md:h-[480px] md:w-auto" src="/assets/accordion/iaido.png" width="960" height="480" alt="Iaido"></img>
+                        <img className="object-cover h-72 md:h-full md:w-auto" src="/assets/accordion/iaido.png" width="960" height="480" alt="Iaido"></img>
                     </article>                                
                 </div>
             </div>
