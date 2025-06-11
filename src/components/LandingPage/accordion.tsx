@@ -4,38 +4,77 @@ import { useRouter } from "next/navigation";
 import Image from "next/image"
 
 interface AccordionProps {
-    onImageChange: (imageSrc: string) => void;
+    onImageChange: (topImageSrc: string, bottomImageSrc: string, title: string, description: string) => void;
 }
 
 export const Accordion: React.FC<AccordionProps> = ({ onImageChange}) => {
+    
 
     const [activeArticle, setActiveArticle] = useState<number | null>(null);
 
     const imageMap = {
-        0: "/assets/backgroundAccordion/Archangel/top-layer.svg",
-        1: "/assets/backgroundAccordion/Kyouka/top-layer.svg",
-        2: "/assets/backgroundAccordion/Suigetsu/top-layer.svg", 
-        3: "/assets/backgroundAccordion/Iaido/top-layer.svg"
+        0: {
+            top: "/assets/backgroundAccordion/Archangel/top-layer.svg",
+            bottom: "/assets/backgroundAccordion/Archangel/bottom-layer.svg",
+            title: "/assets/backgroundAccordion/Archangel/title.svg",
+            description: "/assets/backgroundAccordion/Archangel/desc.svg",
+        },
+        1: {
+            top: "/assets/backgroundAccordion/Kyouka/top-layer.svg",
+            bottom: "/assets/backgroundAccordion/Kyouka/bottom-layer.svg",
+            title: "/assets/backgroundAccordion/Kyouka/title.svg",
+            description: "/assets/backgroundAccordion/Kyouka/desc.svg",
+        },
+        2: {
+            top: "/assets/backgroundAccordion/Suigetsu/top-layer.svg", 
+            bottom: "/assets/backgroundAccordion/Suigetsu/bottom-layer.svg",
+            title: "/assets/backgroundAccordion/Suigetsu/title.svg",
+            description: "/assets/backgroundAccordion/Suigetsu/desc.svg",
+        },
+        3: {
+            top: "/assets/backgroundAccordion/Iaido/top-layer.svg",
+            bottom: "/assets/backgroundAccordion/Iaido/bottom-layer.svg",
+            title: "/assets/backgroundAccordion/Iaido/title.svg",
+            description: "/assets/backgroundAccordion/Iaido/desc.svg",
+        }
     };
+
+    const defaultImage = {
+        top: "/assets/backgroundAccordion/Static/top-layer.svg",
+        bottom: "/assets/backgroundAccordion/Static/bottom-layer.svg",
+        title: "/assets/backgroundAccordion/Static/title.svg",
+        description: "/assets/backgroundAccordion/Static/desc.svg"
+    }
 
     const handleArticleClick = (index: number, event: React.MouseEvent) => {
         event.preventDefault();
         
         if (activeArticle === index) {
             setActiveArticle(null);
-            onImageChange("/assets/backgroundAccordion/Static/top-layer.svg");
+            onImageChange(
+                defaultImage.top,
+                defaultImage.bottom,
+                defaultImage.title,
+                defaultImage.description,
+            );
         } else {
             setActiveArticle(index);
-            onImageChange(imageMap[index as keyof typeof imageMap]);
+            const selectedImages = (imageMap[index as keyof typeof imageMap]);
+            onImageChange(
+                selectedImages.top,
+                selectedImages.bottom,
+                selectedImages.title,
+                selectedImages.description,
+            );
         }
     };
 
     return (
         <div className="absolute flex justify-center items-center w-full z-100">
             <div className="flex flex-row place-items-center-safe justify-center pl-[7vw] pr-[5vw] gap-[5vw]">
-                <div className="relative p-[0.625vw] flex flex-col w-[30.938vw] h-[45vh]">
+                <div className="relative p-[0.625vw] flex flex-col w-[30.938vw] h-[45vh] gap-[1.5vw]">
                     <Image
-                        src={"/assets/accordion/Static/title.svg"}
+                        src={activeArticle !== null ? imageMap[activeArticle as keyof typeof imageMap].title : defaultImage.title}
                         alt="Title"
                         width={(1920 * 2) / 3}
                         height={(3148 * 2) / 3}
@@ -43,6 +82,27 @@ export const Accordion: React.FC<AccordionProps> = ({ onImageChange}) => {
                         className="w-full"
                     >
                     </Image>
+                    <Image
+                        src={activeArticle !== null ? imageMap[activeArticle as keyof typeof imageMap].description : defaultImage.description}
+                        alt="Description"
+                        width={(1920 * 2) / 3}
+                        height={(3148 * 2) / 3}
+                        sizes="100vw"
+                        className="w-full"
+                    >
+                    </Image>
+                    <div className="hover:drop-shadow-[20px_10px_0_rgba(242,1,60,1)] w-[18vw] h-[3.125vw] z-1 transition-all duration-340 align-self-">
+                        <button
+                            type="button"
+                            className="flex items-center text-center mask-linear-128 mask-linear-from-85% mask-linear-to-85% bg-[#F2013C] w-[19vw] h-[3.125vw] z-1
+                            relative overflow-hidden text-white shadow-2xl 
+                            transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-[#050014] 
+                            before:transition-all before:duration-340 hover:text-white hover:before:left-0 hover:before:w-full active:before:bg-[#F2013C] active:before:transition-none">
+                            <p className="absolute w-[85%] text-[2.3vw] group/unit font-neotriad">
+                                TO CATALOGUE
+                            </p>
+                        </button>
+                    </div>
                 </div>
                 <div className="group flex justify-center place-items-center-safe w-[45vw] h-[80vh]
                                 max-md:flex-col gap-[1.563vw] m-[1vw]">

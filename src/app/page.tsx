@@ -8,9 +8,22 @@ import Accordion from "@/components/LandingPage/accordion";
 export default function Home() {
 
   const [backgroundImage, setBackgroundImage] = useState("/assets/backgroundAccordion/Static/top-layer.svg");
+  const [bottomLayerImage, setBottomLayerImage] = useState("/assets/backgroundAccordion/Static/bottom-layer.svg");
+  const [animationKey, setAnimationKey] = useState(0);
 
-  const handleImageChange = (newImageSrc: string) => {
-    setBackgroundImage(newImageSrc);
+  const handleImageChange = (newTopImageSrc: string, newBottomImageSrc: string) => {
+    
+    if (
+      newTopImageSrc !== backgroundImage || 
+      newBottomImageSrc !== bottomLayerImage
+    ) 
+      {
+      setAnimationKey(prev => prev + 1);
+      
+      
+      setBackgroundImage(newTopImageSrc);
+      setBottomLayerImage(newBottomImageSrc);
+    }
   };
 
   return (
@@ -36,7 +49,7 @@ export default function Home() {
           width={(1920 * 2) / 3}
           height={(3148 * 2) / 3}
           sizes="100vw"
-          className="absolute contain-layout z-1 top-[12vh] left-[5.052vw] w-[26.183vw] h-[72.407vh] animate-slide-in-left opacity-0 hover:scale-105 transition-transform duration-700 ease-out"
+          className="absolute contain-layout z-1 top-[12vh] left-[5.052vw] w-[30vw] h-[72.407vh] animate-slide-in-left opacity-0 hover:scale-105 transition-transform duration-700 ease-out"
         />
         <Image
           src="/assets/backgroundMain/ornament4.svg"
@@ -65,7 +78,7 @@ export default function Home() {
           width={(1920 * 2) / 3}
           height={(3148 * 2) / 3}
           sizes="100vw"
-          className="absolute z-0 contain-layout top-[1.667vh] left-[1.563vw] w-full h-full opacity-75 animate-fade-in hover:opacity-90 transition-opacity duration-700 neon-flicker-in"
+          className="absolute z-0 contain-layout top-[1.667vh] left-[1.563vw] w-full h-full opacity-75 animate-fade-in hover:opacity-90 transition-opacity duration-700 neon-flicker-in-long"
         />
         <Image
           src="/assets/backgroundMain/decorationData.svg"
@@ -101,7 +114,7 @@ export default function Home() {
           width={(1920 * 2) / 3}
           height={(3148 * 2) / 3}
           sizes="100vw"
-          className="absolute z-2 contain-layout top-[20vh] right-[15vw] w-[2.503vw] h-[4.39vh] animate-fade-in-up hover:rotate-12 transition-transform duration-300"
+          className="absolute z-2 contain-layout top-[20vh] right-[15vw] w-[2.503vw] h-[4.39vh] animate-fade-in-up ghost-flicker-repeat hover:rotate-12 transition-transform duration-300"
         />
         <Image
           src="/assets/backgroundMain/squareGray.svg"
@@ -110,7 +123,7 @@ export default function Home() {
           width={(1920 * 2) / 3}
           height={(3148 * 2) / 3}
           sizes="100vw"
-          className="absolute z-2 contain-layout top-[20vh] right-[11.75vw] w-[4.39vw] h-[4.39vh] animate-fade-in-up hover:rotate-6 transition-transform duration-300"
+          className="absolute z-2 contain-layout top-[20vh] right-[11.75vw] w-[4.39vw] h-[4.39vh] animate-fade-in-up ghost-flicker-repeat hover:rotate-6 transition-transform duration-300"
         />
 
         {/*MAIN HERO*/}
@@ -133,12 +146,13 @@ export default function Home() {
           style={{ aspectRatio: '16/9' }}
         >
           <Image
-            src="/assets/backgroundAccordion/Static/bottom-layer.svg"
+            key={`bottom-${animationKey}`}
+            src={bottomLayerImage}
             alt="Background Accordion"
             quality={100}
             fill={true}
             sizes="100vw"
-            className="object-cover"
+            className="object-cover animate-fade-in"
             />
 
           <Image
@@ -151,12 +165,13 @@ export default function Home() {
           />
 
           <Image
+            key={`top-${animationKey}`}
             src={backgroundImage}
             alt="Background Accordion"
             quality={100}
             fill={true}
             sizes="100vw"
-            className="object-cover w-full h-full"
+            className="object-cover w-full h-full animate-fade-in"
             style={{ aspectRatio: '16/9' }}
           />
         </div>

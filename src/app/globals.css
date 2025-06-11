@@ -343,7 +343,7 @@
   opacity: 0.5;
 }
 
-@keyframes neon-flicker-in {
+@keyframes neon-flicker-in-long{
   0%, 5%, 15%, 25% {
     opacity: 0;
     text-shadow: none;
@@ -358,7 +358,22 @@
   }
 }
 
-@keyframes ghost-flicker {
+@keyframes neon-flicker-in-short{
+  0%, 5%, 15%, 25% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  10%, 20%, 30% {
+    opacity: 1;
+    text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff;
+  }
+  100% {
+    opacity: 1;
+    text-shadow: 0 0 5px #00ffff;
+  }
+}
+
+@keyframes ghost-flicker-long {
   0%, 100% {
     opacity: 1;
   }
@@ -371,6 +386,32 @@
   75% {
     opacity: 0.1;
   }
+}
+
+@keyframes ghost-flicker-short {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  75% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes ghost-flicker-repeat {
+0% {opacity:0} 5% {opacity:0.4} 10%{opacity:0.8} 15%{opacity:0.2} 20%{opacity:0.6}
+25%{opacity:0.1} 30%{opacity:0.5} 35%{opacity:0.3} 40%{opacity:0.7} 45%{opacity:0.2}
+50%{opacity:0.8} 57%{opacity:0.2} 64%{opacity:0.4} 71%{opacity:0.2}
+80%{opacity:0.6} 89%{opacity:0}
+100%{opacity:1} 
 }
 
 @keyframes cyber-static {
@@ -397,9 +438,11 @@
   }
 }
 
-.neon-flicker-in { animation: neon-flicker-in 4s ease-out forwards; }
-.ghost-flicker { animation: ghost-flicker 2s ease-out forwards; }
-.cyber-static { animation: cyber-static 2s ease-out forwards; }
+.neon-flicker-in-long { animation: neon-flicker-in-long 6s ease-out forwards; }
+.ghost-flicker-short { animation: ghost-flicker-short 1000ms ease-out forwards; }
+.ghost-flicker-repeat {animation: ghost-flicker-repeat 4s ease-out forwards;}
+.ghost-flicker-long { animation: ghost-flicker-long 4s ease-out forwards; }
+.cyber-static { animation: cyber-static 4s ease-out forwards; }
 
 body {
   background: var(--background);

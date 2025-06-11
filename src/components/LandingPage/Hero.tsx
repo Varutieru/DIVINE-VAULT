@@ -24,7 +24,7 @@ export const Hero = () => {
                         width={(1920 * 2) / 3}
                         height={(3148 * 2) / 3}
                         sizes="100vw"
-                        className="w-[10%] mb-8 neon-flicker-in"
+                        className="w-[10%] mb-8 neon-flicker-in-long"
                     />
                     <div className="items-center text-black mb-6">
                         <Image
@@ -45,7 +45,7 @@ export const Hero = () => {
                             width={(1920 * 2) / 3}
                             height={(3148 * 2) / 3}
                             sizes="100vw"
-                            className="w-full neon-flicker-in"
+                            className="w-full ghost-flicker-short"
                         />
                     </div>
                     {/* <div className="leading-none text-black text-[4.814vw] mb-2">
