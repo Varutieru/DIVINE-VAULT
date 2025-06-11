@@ -15,7 +15,7 @@ export const Accordion: React.FC<AccordionProps> = ({ onImageChange}) => {
     const [currentDescriptionSrc, setCurrentDescriptionSrc] = useState<string>("");
     const [currentBottomBG, setCurrentBottomBG] = useState<string>("");
     const [currentTopBG, setCurrentTopBG] = useState<string>("");
-    const [showNewContent, setShowNewContent] = useState(false);
+    const [showNewContent, setShowNewContent] = useState(true);
 
     const imageMap = {
         0: {

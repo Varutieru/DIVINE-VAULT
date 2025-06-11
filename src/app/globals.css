@@ -226,11 +226,11 @@
 
 /* Animation Classes */
 .animate-fade-in {
-  animation: fade-in 0.2s ease-out forwards;
+  animation: fade-in 0.5s ease-out forwards;
 }
 
 .animate-fade-out {
-  animation: fade-out 0.2s ease-out forwards;
+  animation: fade-out 0.5s ease-out forwards;
 }
 
 .animate-slide-in-right {
