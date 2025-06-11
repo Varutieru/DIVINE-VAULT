@@ -149,7 +149,7 @@ export const Accordion: React.FC<AccordionProps> = ({ onImageChange}) => {
                         </button>
                     </div>
                 </div>
-                <div className="group flex justify-center place-items-center-safe w-[45vw] h-[80vh]
+                <div className="group flex justify-center place-items-center-safe w-[45vw] h-[70vh]
                                 max-md:flex-col gap-[1.563vw] m-[1vw]">
                     {/* Archangel Article */}
                     <article className={`group/article relative w-full grayscale hover:grayscale-0
