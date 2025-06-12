@@ -50,6 +50,7 @@ export const navbarDesktop = () => {
                             alt="Shopping Cart Icon"
                             fill
                             className="object-contain cursor-pointer hover:opacity-80"
+                            onClick={() => router.push("/cart")}
                         />
                     </div>
                     <div className="w-[100px] sm:w-[120px] lg:w-[140px] h-[40px] sm:h-[48px] lg:h-[54px] bg-[#000000] flex items-center justify-center text-sm

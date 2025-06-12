@@ -8,16 +8,16 @@ export default function Footer() {
     const router = useRouter();
 
     const quickLinks = [
-    { text: "Catalogue", href: "#0"},
+    { text: "Catalogue", href: "/catalogue"},
     { text: "About Us", href: "#0"},
     { text: "Contact", href: "#0"},
     ];
 
     const socialLinks = [
-    { text: "Instagram", href: "#0"},
-    { text: "TikTok", href: "#0"},
-    { text: "Twitter", href: "#0"},
-    { text: "Facebook", href: "#0"},
+    { text: "Instagram", href: "https://www.instagram.com/divin3.artworks/"},
+    { text: "TikTok", href: "https://www.tiktok.com"},
+    { text: "Twitter", href: "https://www.twitter.com"},
+    { text: "Facebook", href: "https://www.facebook.com"},
     ];
 
     return(
@@ -36,8 +36,8 @@ export default function Footer() {
             </div>
         </div>
         {/* Section Kanan */}
-        <div className="flex flex-row w-[32vw] justify-between 2xl:text-2xl">
-            {/* Kolom */}
+        <div className="flex flex-row w-[32vw] justify-between 2xl:text-2xl font-neoris-regular">
+            {/* Kolom Quick Links*/}
             <div className="flex-col">
                 <h1 className="font-bold pb-1">Quick Links</h1>
                 <ul>
@@ -56,7 +56,7 @@ export default function Footer() {
                   ))}
                 </ul>
             </div>
-            {/* Kolom */}
+            {/* Kolom Social Media*/}
             <div className="flex-col">
                 <h1 className="font-bold pb-1">Find Us</h1>
                 <ul>
@@ -66,8 +66,9 @@ export default function Footer() {
                       className="text-xs 2xl:text-xl font-neoris-regular"
                     >
                       <Link
-                        className="hover:text-yellow font-PlusJakartaSans"
+                        className="hover:text-yellow"
                         href={link.href}
+                        target="_blank"
                       >
                         {link.text}
                       </Link>
@@ -75,7 +76,7 @@ export default function Footer() {
                   ))}
                 </ul>
             </div>
-            {/* Kolom */}
+            {/* Kolom Contact Us*/}
             <div className="flex-col">
                 <h1 className="font-bold pb-1">Contact Us</h1>
                 <p className="text-xs 2xl:text-xl">
