@@ -14,26 +14,38 @@ export default function Cart() {
         <div className="flex relative justify-center flex-row mb-24">
             {/* Products */}
             <div className="bg-white relative grid grid-cols-2 w-[50vw] justify-between pt-8">
-                <h1 className="font-neoris text-xl mb-4">Bag</h1>
+                <h1 className="font-neoris text-2xl mb-4">Bag</h1>
             </div>
             {/* Checkout Sidebar */}
-            <div className="bg-red-100 sticky top-0 h-fit w-[20vw] mx-8 pt-8">
-                <h1 className="font-neoris text-xl mb-4">Summary</h1>
-                <p>Select Size:</p>
-                <button className="bg-thistle active:bg-mountbattenPink border text-2xl cursor-pointer">
-                    pura-puranya tombol2 pilih size
-                </button>
-                <p className="mb-12">Ukuran: Unisex XXXXXL</p>
+            <div className="sticky top-0 h-fit w-[20vw] mx-8 pt-8">
+                <h1 className="font-neoris text-2xl mb-6">Summary</h1>
+
+                <div className="mb-8 flex flex-col gap-2">
+                    <div className="w-full flex flex-row justify-between">
+                        <p>Subtotal</p>
+                        <p>—</p>
+                    </div>
+                    
+                    <div className="w-full flex flex-row justify-between">
+                        <p>Estimated Delivery & Handling</p>
+                        <p>Free</p>
+                    </div>
+                    
+                    <div className="w-full flex flex-row justify-between">
+                        <p>Estimated Duties and Taxes</p>
+                        <p>—</p>
+                    </div>
+                </div>
                 
-                <h1 className="font-neoris-bold text-3xl">bbbbbbbbbbbbbbb</h1>
-                <p className="mb-6">Limited Store Dibuat dari Bahan Bukan Daur Ulang</p>
 
-                <p>Stok tersedia</p>
-                <button className="bg-black active:bg-mountbattenPink w-full text-white border mt-16 p-2 cursor-pointer">
-                    Tambahkan ke keranjang
+                <div className="w-full flex flex-row justify-between font-neoris-bold text-3xl">
+                    <p>Total</p>
+                    <p>—</p>
+                </div>
+
+                <button className="bg-black active:bg-mountbattenPink w-full text-white border rounded-full mt-16 p-2 cursor-pointer">
+                    CHECKOUT
                 </button>
-
-                <p className="mt-16">ccccccccccccccccccccccccccccccccccccc</p>
             </div>
         </div>
         {/* People also bought */}
