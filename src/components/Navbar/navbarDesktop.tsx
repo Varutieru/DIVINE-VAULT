@@ -53,10 +53,12 @@ export const navbarDesktop = () => {
                             onClick={() => router.push("/cart")}
                         />
                     </div>
+                    <a className="block w-full h-full" href="/auth/login">
                     <div className="w-[100px] sm:w-[120px] lg:w-[140px] h-[40px] sm:h-[48px] lg:h-[54px] bg-[#000000] flex items-center justify-center text-sm
                         sm:text-base lg:text-lg text-[#ffffff] cursor-pointer hover:bg-gray-800 transition-colors duration-200 font-neotriad animate-slide-in-above6">
                         SIGN IN
                     </div>
+                    </a>
                 </div>
             </div>
         </div>
