@@ -43,7 +43,7 @@ export const navbarDesktop = () => {
                 </div>
                 
                 {/* Cart and Sign In Section */}
-                <div className="flex items-center gap-2 sm:gap-4">
+                <div className="flex h-full items-center gap-2 sm:gap-4 justify-between">
                     <div className="w-[30px] sm:w-[40px] lg:w-[50px] h-[30px] sm:h-[40px] lg:h-[50px] relative animate-slide-in-above5">
                         <Image
                             src="/assets/navbar/logo-cart.svg"
@@ -54,7 +54,7 @@ export const navbarDesktop = () => {
                         />
                     </div>
                     <a className="block w-full h-full" href="/auth/login">
-                    <div className="w-[100px] sm:w-[120px] lg:w-[140px] h-[40px] sm:h-[48px] lg:h-[54px] bg-[#000000] flex items-center justify-center text-sm
+                    <div className="w-full sm:w-full lg:w-full h-full sm:h-full lg:h-full bg-[#000000] flex items-center justify-center text-sm
                         sm:text-base lg:text-lg text-[#ffffff] cursor-pointer hover:bg-gray-800 transition-colors duration-200 font-neotriad animate-slide-in-above6">
                         SIGN IN
                     </div>

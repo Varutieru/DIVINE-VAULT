@@ -9,7 +9,10 @@ import Footer from "@/components/Footer";
 export default function Home() {
   return (
     <main>
-      <div className="bg-magnolia relative overflow-hidden">
+      <div 
+        className="bg-magnolia relative overflow-hidden w-[100%] h-[100%] max-w-[100vw] max-h-[100vh] animate-fade-in"
+        style={{ aspectRatio: '16/9' }}
+        >
         <NavBar/>
         {/* Hero */}
         <div className="bg-thistle flex justify-center items-center w-full h-[44vh]">

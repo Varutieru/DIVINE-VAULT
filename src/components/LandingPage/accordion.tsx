@@ -90,10 +90,10 @@ export const Accordion: React.FC<AccordionProps> = ({ onImageChange}) => {
                     selectedImages.description,
                 );
                 setShowNewContent(false);
-                setTimeout(() => setShowNewContent(true), 200);
+                setTimeout(() => setShowNewContent(true), 500);
             }
-            setTimeout(() => setIsAnimating(false), 400);
-        }, 200);
+            setTimeout(() => setIsAnimating(false), 1000);
+        }, 500);
     };
 
     return (
@@ -102,7 +102,7 @@ export const Accordion: React.FC<AccordionProps> = ({ onImageChange}) => {
                 <div className="relative p-[0.625vw] flex flex-col w-[30.938vw] h-[45vh] gap-[1.5vw]">
 
                     {/* Title */}
-                    <div className={`relative overflow-hidden ${isAnimating ? 'animate-fade-out' : 'animate-fade-in'}`}>
+                    <div className={`relative overflow-hidden ${isAnimating ? 'fade-out-left' : 'fade-in-right'}`}>
                         {currentTitleSrc && showNewContent && (
                             <Image
                                 src={currentTitleSrc}
@@ -119,7 +119,7 @@ export const Accordion: React.FC<AccordionProps> = ({ onImageChange}) => {
                     </div>
                     
                     {/* Description */}
-                    <div className={`relative overflow-hidden ${isAnimating ? 'animate-fade-out' : 'animate-fade-in'}`}>
+                    <div className={`relative overflow-hidden ${isAnimating ? 'fade-out-left-delayed' : 'fade-in-right-delayed'}`}>
                         {currentDescriptionSrc && showNewContent && (
                             <Image
                                 src={currentDescriptionSrc}

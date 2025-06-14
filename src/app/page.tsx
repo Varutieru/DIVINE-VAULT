@@ -27,7 +27,7 @@ export default function Home() {
         setBackgroundImage(newTopImageSrc);
         setBottomLayerImage(newBottomImageSrc);
         setShowNewBackground(true);
-      }, 200);
+      }, 500);
     }
   };
 
@@ -142,7 +142,7 @@ export default function Home() {
       {/* ACCORDION PAGE */}
       <div 
         id="accordionPage"
-        className="bg-[#EAE7F0] flex justify-center align-center place-items-center-safe absolute overflow-hidden w-[100%] h-[100%] max-w-[100vw] max-h-[100vh] animate-fade-in"
+        className="bg-[#EAE7F0] flex justify-center align-center place-items-center-safe absolute overflow-hidden w-[100%] h-[100%] max-w-[100vw] max-h-[100vh]"
       >
         <div 
           className="absolute top-0 left-0 w-full"
@@ -165,7 +165,7 @@ export default function Home() {
             quality={100}
             fill={true}
             sizes="100vw"
-            className={`object-cover ${showNewBackground ? 'animate-fade-in' : 'animate-fade-out'}`} // Apply fade-in or fade-out
+            className={`object-cover ${showNewBackground ? 'animate-fade-in-2' : 'animate-fade-out-2'}`}
           />
           <Image
             src="/assets/backgroundAccordion/middle-layer.svg"
@@ -183,8 +183,7 @@ export default function Home() {
             quality={100}
             fill={true}
             sizes="100vw"
-            className={`object-cover w-full h-full ${showNewBackground ? 'animate-fade-in' : 'animate-fade-out'}`} // Apply fade-in or fade-out
-            style={{ aspectRatio: '16/9' }}
+            className={`object-cover w-full h-full ${showNewBackground ? 'animate-fade-in-1' : 'animate-fade-out-1'}`}
           />
         </div>
 

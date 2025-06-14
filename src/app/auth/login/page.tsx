@@ -52,7 +52,10 @@ const LoginPage = () => {
 
   return (
     // <BackgroundAuth>
-    <div className="bg-magnolia">
+    <div
+    className="bg-magnolia relative overflow-hidden w-[100%] h-[100%] max-w-[100vw] max-h-[100vh] animate-fade-in"
+    style={{ aspectRatio: '16/9' }}
+    >
       {/* Close Button */}
       <button
         onClick={() => router.push("/")}
@@ -69,7 +72,7 @@ const LoginPage = () => {
             LOG IN
           </h1>
           <p className="text-center text-lg mb-8 font-PulsarOriginal">
-            Log in with your data that you entered during your registration
+            Log in with your credentials
           </p>
 
           <div className="space-y-4">
